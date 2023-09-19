@@ -1,0 +1,12 @@
+{
+    "scripts": {
+        "post-update-cmd": [
+            "rm -rf assets/bootstrap",
+            "mkdir -p assets/bootstrap",
+            "cp -R vendor/twbs/bootstrap/dist assets/bootstrap"
+        ]
+    },
+    "require": {
+        "twbs/bootstrap": "*"
+    }
+}
