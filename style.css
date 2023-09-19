@@ -1,0 +1,67 @@
+@font-face {
+    font-family: "Segoe UI";
+    font-weight: 300;
+    src: local("Segoe UI Semilight"), local("Segoe UI");
+}
+
+body {  
+    margin: 0 !important;
+}
+
+.container-fluid {
+    background-image: url(images/urna.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 95vh;
+    width: 95%;
+    position: relative;
+}
+
+.tela {
+    position: absolute;
+    /* background-color: rgba(255, 150, 150, 0.5); */
+    width: 53rem;
+    height: 30rem;
+    top: 18rem;
+    left: 3rem;
+    padding: 5rem;
+}
+
+.cargo {
+    font: 300 2.5rem "Segoe UI";
+}
+
+input[type=number] {
+    border: 1px solid black;
+    width: 2.5rem;
+    height: 3rem;
+}
+
+.dados-candidato {
+    position: relative;
+}
+
+.dados {
+    margin-top: 2rem;
+}
+
+.dado {
+    margin-left: 2rem;
+}
+
+.foto-candidato {
+    margin-top: 1rem;
+    background-image: url(images/5bm-rodrigo-pf-09.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 18rem;
+    width: 18rem;
+}
+
+.rodape  {
+    border-top: 1px solid black;
+    margin-left: -4.5rem;
+    margin-right: -4.5rem;
+}
