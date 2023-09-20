@@ -22,8 +22,9 @@ body {
     width: 49rem;
     height: 28rem;
     top: 21rem;
-    left: 3rem;
+    left: 6rem;
     padding: 2rem;
+    box-sizing: border-box;
 }
 
 .cargo {
@@ -93,7 +94,7 @@ input[type=number] {
     width: 4.5rem;
     height: 4rem;
     margin-top: 0.25rem;
-    opacity: 0.01;
+    opacity: 0.5;
 }
 
 .keypad > .comandos > button {
