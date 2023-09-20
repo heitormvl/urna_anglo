@@ -1,3 +1,27 @@
+<?php
+
+$pdo = require 'connect.php';
+
+$candidatos = $pdo->query('SELECT * FROM vw_candidatos')->fetchAll(PDO::FETCH_ASSOC);
+
+$arrCandidatos = [];
+
+if ($candidatos) {
+    foreach ($candidatos as $candidato) {
+        $arrCandidatos[] = [
+            'nome_candidato' => $candidato['nome_candidato'],
+            'nome_partido_candidato' => $candidato['nome_partido_candidato'],
+            'sigla_partido_candidato' => $candidato['sigla_partido_candidato'],
+            'numero_candidato' => $candidato['numero_candidato'],
+            'foto_candidato' => $candidato['foto_candidato'],
+            'nome_turma' => $candidato['nome_turma']
+        ];
+    }
+}
+
+$json = json_encode($arrCandidatos);
+
+?>
 <!DOCTYPE html>
 <html lang="pt-BR">
 
