@@ -8,11 +8,10 @@ $arrCandidatos = [];
 
 if ($candidatos) {
     foreach ($candidatos as $candidato) {
-        $arrCandidatos[] = [
+        $arrCandidatos[$candidato['numero_candidato']] = [
             'nome_candidato' => $candidato['nome_candidato'],
             'nome_partido_candidato' => $candidato['nome_partido_candidato'],
             'sigla_partido_candidato' => $candidato['sigla_partido_candidato'],
-            'numero_candidato' => $candidato['numero_candidato'],
             'foto_candidato' => $candidato['foto_candidato'],
             'nome_turma' => $candidato['nome_turma']
         ];

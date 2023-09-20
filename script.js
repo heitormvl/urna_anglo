@@ -53,9 +53,28 @@ function confirmar()
 function corrigir() {
     $('#digito1').val('');
     $('#digito2').val('');
+    $('#numero_candidato').val('');
     exibirCandidato(false);
 }
 
 function branco() {
 
+}
+
+function validarCandidato() {
+
+    const numCandidato = $('#digito1').val() + $('#digito2').val();
+
+    // Checa se o número do candidato existe
+    if (!candidatos[numCandidato]) {
+        votoNulo();
+        return;
+    }
+
+    const candidato = candidatos[numCandidato];
+
+    $('#nome_candidato').text(candidato.nome_candidato);
+    $('#partido_candidato').text(candidato.sigla_partido_candidato + " - " + candidato.nome_partido_candidato);
+    $('.foto-candidato').css('background-image', 'url(images/' + candidato.foto_candidato + ')');
+    alert($('.foto-candidato').css('background-image'));
 }
