@@ -30,6 +30,8 @@ $json = json_encode($arrCandidatos);
     <title>Urna Eletrônica Anglo</title>
     <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="assets/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -75,6 +77,7 @@ $json = json_encode($arrCandidatos);
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
