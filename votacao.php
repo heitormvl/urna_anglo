@@ -2,21 +2,18 @@
 
 $pdo = require 'connect.php';
 
-$candidatos = $pdo->query('SELECT * FROM vw_candidatos')->fetchAll(PDO::FETCH_ASSOC);
+$candidatos = $pdo->query('SELECT * FROM vw_candidatos ORDER BY id_turma, id_candidato')->fetchAll(PDO::FETCH_ASSOC);
 
-$arrCandidatos = [];
+foreach ($candidatos as $candidato) {
 
-if ($candidatos) {
-    foreach ($candidatos as $candidato) {
-        $arrCandidatos[$candidato['numero_candidato']] = [
-            'nome_candidato' => $candidato['nome_candidato'],
-            'id_turma_candidato' => $candidato['id_turma'],
-            'nome_partido_candidato' => $candidato['nome_partido_candidato'],
-            'sigla_partido_candidato' => $candidato['sigla_partido_candidato'],
-            'foto_candidato' => $candidato['foto_candidato'],
-            'nome_turma' => $candidato['nome_turma']
-        ];
-    }
+    $arrCandidatos[$candidato['id_turma']][$candidato['numero_candidato']] = [
+        'nome_candidato' => $candidato['nome_candidato'],
+        'id_turma_candidato' => $candidato['id_turma'],
+        'nome_partido_candidato' => $candidato['nome_partido_candidato'],
+        'sigla_partido_candidato' => $candidato['sigla_partido_candidato'],
+        'foto_candidato' => $candidato['foto_candidato'],
+        'nome_turma' => $candidato['nome_turma']
+    ];
 }
 
 $json = json_encode($arrCandidatos);

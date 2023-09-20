@@ -83,22 +83,16 @@ function votoNulo() {
 
 function validarCandidato() {
 
+    const urlParams = new URLSearchParams(window.location.search);
+    const turma = urlParams.get('turma');
     const numCandidato = $('#digito1').val() + $('#digito2').val();
+    const candidato = candidatos[turma.toString()][parseInt(numCandidato).toString()];
 
     // Checa se o número do candidato existe
-    if (!candidatos[numCandidato]) {
+    if (!candidato) {
         votoNulo();
         return false;
     }
-
-    const candidato = candidatos[numCandidato];
-
-    // // Checa o ID da turma
-    // const idTurma = $_GET['turma'];
-    // if (candidato.id_turma_candidato != idTurma) {
-    //     votoNulo();
-    //     return false;
-    // }
 
     $('#nome_candidato').text(candidato.nome_candidato);
     $('#partido_candidato').text(candidato.sigla_partido_candidato + " - " + candidato.nome_partido_candidato);
