@@ -34,6 +34,10 @@ $json = json_encode($arrCandidatos);
     <script src="assets/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
 
+<script type="text/javascript">
+    const candidatos = <?= $json ?>;
+</script>
+
 <body>
     <div class="container-fluid">
         <div class="tela">
