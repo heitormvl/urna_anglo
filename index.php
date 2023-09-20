@@ -27,7 +27,7 @@ $json = json_encode($arrCandidatos);
 
 <head>
     <meta charset="UTF-8">
-    <title>PHP Hello World</title>
+    <title>Urna Eletrônica Anglo</title>
     <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
