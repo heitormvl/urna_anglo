@@ -45,7 +45,7 @@ $json = json_encode($arrCandidatos);
                     <form action="confirmar_voto.php" method="POST" class="pt-3">
                         <input type="number" name="digito1" id="digito1">
                         <input type="number" name="digito2" id="digito2">
-                        <div class="dados_candidato">
+                        <div class="dados_candidato d-none">
                             <div class="dados">
                                 <span>
                                     Nome:
@@ -61,7 +61,7 @@ $json = json_encode($arrCandidatos);
                         </div>
                     </form>
                 </div>
-                <div class="col-4">
+                <div class="col-4 foto d-none">
                     <div class="foto-candidato"></div>
                 </div>
             </div>
