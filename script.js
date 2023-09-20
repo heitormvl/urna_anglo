@@ -11,7 +11,7 @@ jQuery(function($) {
         }
     });
 
-    // Ao clicar 
+    // Botões de dígitos
     $('button.digito').on('click', function() {
 
         const digito = parseInt($(this).text());
@@ -26,6 +26,11 @@ jQuery(function($) {
             exibirCandidato(true);
         }
     });
+
+    // Botões de comandos
+    $('button.comando[data-cmd="branco"]').on('click', votoBranco);
+    $('button.comando[data-cmd="corrigir"]').on('click', corrigir);
+    $('button.comando[data-cmd="confirmar"]').on('click', confirmar);
 });
 
 
@@ -43,6 +48,7 @@ function exibirCandidato(exibir)
         $('.dados-candidato').addClass('d-none');
         $('.foto').addClass('d-none');
         $('.rodape').addClass('d-none');
+        $('.voto-especial').addClass('d-none');
     }
 }
 
@@ -57,8 +63,9 @@ function corrigir() {
     exibirCandidato(false);
 }
 
-function branco() {
-
+function votoBranco() {
+    exibirCandidato(false);
+    $('.voto-especial.voto-branco').removeClass('d-none');
 }
 
 function validarCandidato() {
@@ -76,5 +83,4 @@ function validarCandidato() {
     $('#nome_candidato').text(candidato.nome_candidato);
     $('#partido_candidato').text(candidato.sigla_partido_candidato + " - " + candidato.nome_partido_candidato);
     $('.foto-candidato').css('background-image', 'url(images/' + candidato.foto_candidato + ')');
-    alert($('.foto-candidato').css('background-image'));
 }

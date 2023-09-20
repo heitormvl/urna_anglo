@@ -46,7 +46,7 @@ $json = json_encode($arrCandidatos);
                         Representante de Turma
                     </h2>
                     <form action="confirmar_voto.php" method="POST" class="pt-3">
-                        <input type="text" name="digito1" id="digito1" >
+                        <input type="text" name="digito1" id="digito1">
                         <input type="text" name="digito2" id="digito2">
                         <input type="hidden" name="numero_candidato" id="numero_candidato">
                         <div class="dados-candidato d-none">
@@ -64,6 +64,12 @@ $json = json_encode($arrCandidatos);
                             </div>
                         </div>
                     </form>
+                    <div class="voto-especial voto-branco blink d-none">
+                        <h1>VOTO EM BRANCO</h1>
+                    </div>
+                    <div class="voto-especial voto-nulo blink d-none">
+                        <h1>VOTO NULO</h1>
+                    </div>
                 </div>
                 <div class="col-4 foto d-none">
                     <div class="foto-candidato"></div>
@@ -90,9 +96,9 @@ $json = json_encode($arrCandidatos);
                     <button class="btn btn-primary btn-block digito">0</button>
                 </div>
                 <div class="comandos">
-                    <button class="btn btn-primary btn-block comando">Branco</button>
-                    <button class="btn btn-primary btn-block comando">Corrige</button>
-                    <button class="btn btn-primary btn-block comando">Confirma</button>
+                    <button class="btn btn-primary btn-block comando" data-cmd="branco">Branco</button>
+                    <button class="btn btn-primary btn-block comando" data-cmd="corrigir">Corrige</button>
+                    <button class="btn btn-primary btn-block comando" data-cmd="confirmar">Confirma</button>
                 </div>
             </div>
             <div class="row rodape mt-4 p-1 d-none">

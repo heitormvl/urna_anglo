@@ -105,3 +105,24 @@ input[type=text] {
     margin-top: 0.5rem;
     width: 6.5rem !important;
 }
+
+.voto-especial {
+    width: 50rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.voto-especial h1 {
+    font-size: 4rem;
+}
+
+.blink {
+    animation: blinker 1s linear infinite;
+  }
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
