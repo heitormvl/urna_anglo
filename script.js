@@ -50,8 +50,16 @@ function exibirCandidato(exibir) {
 }
 
 function confirmar() {
-    // Submete o formulário
-    $('#frm_votacao').submit();
+    if (!voto()) {
+        return;
+    }
+    // Toca o áudio de Confirmar
+    const audio = new Audio('audio/confirma-urna.mp3');
+    audio.play();
+    // No evento Ended do áudio, submete o formulário
+    audio.onended = function () {
+        $('#frm_votacao').submit();
+    };
 }
 
 function corrigir() {
@@ -85,6 +93,13 @@ function validarCandidato() {
 
     const candidato = candidatos[numCandidato];
 
+    // // Checa o ID da turma
+    // const idTurma = $_GET['turma'];
+    // if (candidato.id_turma_candidato != idTurma) {
+    //     votoNulo();
+    //     return false;
+    // }
+
     $('#nome_candidato').text(candidato.nome_candidato);
     $('#partido_candidato').text(candidato.sigla_partido_candidato + " - " + candidato.nome_partido_candidato);
     $('.foto-candidato').css('background-image', 'url(images/' + candidato.foto_candidato + ')');
@@ -95,5 +110,8 @@ function validarCandidato() {
 }
 
 function voto(numCandidato) {
+    if (numCandidato == undefined) {
+        return $('#numero_candidato').val();
+    }
     $('#numero_candidato').val(numCandidato);
 }

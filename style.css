@@ -4,7 +4,7 @@
     src: local("Segoe UI Semilight"), local("Segoe UI");
 }
 
-body {  
+body {
     margin: 0 !important;
 }
 
@@ -22,7 +22,7 @@ body {
     width: 49rem;
     height: 28rem;
     top: 21rem;
-    left: 6rem;
+    left: 3rem;
     padding: 2rem;
     box-sizing: border-box;
 }
@@ -69,6 +69,17 @@ input[type=text] {
     margin-right: -2rem;
 }
 
+.fim {
+    width: 42rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.fim h1 {
+    font-size: 6rem !important;
+}
+
 .keypad {
     position: absolute;
     display: flex;
@@ -76,7 +87,7 @@ input[type=text] {
     align-items: stretch;
     justify-items: stretch;
     top: 3.5rem;
-    left: 50.5rem;
+    left: 54rem;
     width: 50%;
     height: 100%;
     padding: 1rem;
@@ -96,10 +107,10 @@ input[type=text] {
     width: 4.5rem;
     height: 4rem;
     margin-top: 0.25rem;
-    opacity: 0.5;
+    opacity: 0.21;
 }
 
-.keypad > .comandos > button {
+.keypad>.comandos>button {
     margin-top: 0.5rem;
     width: 6.5rem !important;
 }
@@ -117,10 +128,10 @@ input[type=text] {
 
 .blink {
     animation: blinker 1s linear infinite;
-  }
-  
-  @keyframes blinker {
+}
+
+@keyframes blinker {
     50% {
-      opacity: 0;
+        opacity: 0;
     }
-  }
+}
