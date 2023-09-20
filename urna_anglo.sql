@@ -44,6 +44,20 @@ CREATE TABLE `candidato` (
 INSERT INTO `candidato` (`id_candidato`, `id_turma`, `nome_candidato`, `nome_partido_candidato`, `sigla_partido_candidato`, `numero_candidato`, `foto_candidato`) VALUES
 (1, 2, 'Benício', 'Partido Feijoada', 'PF', 9, '5bm-benicio-pf-09.jpg'),
 (2, 2, 'Valentina', 'Partido SOS', 'PSOS', 78, '5bm-valentina-psos-78.jpg');
+(3, 2, 'Felipe', 'Partido Democrático Justo', 'PDJ', 77, '5bm-felipe-pdj-77.jpg');
+(4, 2, 'Giovanni', 'Partido da Educação Escolar', 'PEE', 23, '55bm-giovanni-pee-23.jpg');
+(5, 2, 'Pietra', 'Partido Mary Carol', 'PMC', 10, '5bm-pietra-pmc-10.jpg');
+(6, 1, 'Gustavo', 'Partido Hollow Knight', 'PHK', 07, '55am-gustavo-phk-07.jpg');
+(7, 1, 'Helena', 'Partido My Friends', 'PMF', 23, '5am-helena-pmf-23.jpg');
+(8, 1, 'Larissa', 'Partido das Meninas', 'PDM', 04, '5am-larissa-pdm-04.jpg');
+(9, 1, 'Marcelo', 'Partido 12', 'PMLFP', 12, '5am-marcelo-pmlfp-12.jpg');
+(10, 1, 'Pedro Paulo', 'Partido Moradia', 'PM', 91, '5am-pedro-pm-91.jpg');
+(11, 3, 'Caio', 'Partido Vida Plus', 'PVP', 39, '5cm-caio-pvp-39.jpg');
+(12, 3, 'Luca', 'Partido da Educação de São Paulo', 'PESP', 18, '5cm-luca-pesp-18.jpg');
+(13, 3, 'Lucas', 'Partido Justo', 'PJ', 20, '5cm-lucas-pj-20.jpg');
+(14, 3, 'Martina', 'Partido Tom', 'PTOTO', 19, '5cm-martina-ptoto-19.jpg');
+(15, 3, 'Matthew', 'Partido Falta de Moradia', 'PFDM', 12, '5cm-matthew-pfdm-12.jpg');
+
 
 -- --------------------------------------------------------
 
@@ -92,7 +106,7 @@ ALTER TABLE `turma`
 -- AUTO_INCREMENT de tabela `candidato`
 --
 ALTER TABLE `candidato`
-  MODIFY `id_candidato` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_candidato` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de tabela `turma`
