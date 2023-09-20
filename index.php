@@ -47,9 +47,10 @@ $json = json_encode($arrCandidatos);
                         Representante de Turma
                     </h2>
                     <form action="confirmar_voto.php" method="POST" class="pt-3">
-                        <input type="number" name="digito1" id="digito1">
-                        <input type="number" name="digito2" id="digito2">
-                        <div class="dados_candidato d-none">
+                        <input type="text" name="digito1" id="digito1" >
+                        <input type="text" name="digito2" id="digito2">
+                        <input type="hidden" name="numero_candidato" id="numero_candidato">
+                        <div class="dados-candidato d-none">
                             <div class="dados">
                                 <span>
                                     Nome:
@@ -72,27 +73,27 @@ $json = json_encode($arrCandidatos);
             <div class="keypad">
                 <!-- Adicione botões para os números de 0 a 9, Branco, Corrige e Confirmar -->
                 <div>
-                    <button class="btn btn-primary btn-block" onclick="digitar(1)">1</button>
-                    <button class="btn btn-primary btn-block" onclick="digitar(2)">2</button>
-                    <button class="btn btn-primary btn-block" onclick="digitar(3)">3</button>
+                    <button class="btn btn-primary btn-block digito">1</button>
+                    <button class="btn btn-primary btn-block digito">2</button>
+                    <button class="btn btn-primary btn-block digito">3</button>
                 </div>
                 <div>
-                    <button class="btn btn-primary btn-block" onclick="digitar(4)">4</button>
-                    <button class="btn btn-primary btn-block" onclick="digitar(5)">5</button>
-                    <button class="btn btn-primary btn-block" onclick="digitar(6)">6</button>
+                    <button class="btn btn-primary btn-block digito">4</button>
+                    <button class="btn btn-primary btn-block digito">5</button>
+                    <button class="btn btn-primary btn-block digito">6</button>
                 </div>
                 <div>
-                    <button class="btn btn-primary btn-block" onclick="digitar(7)">7</button>
-                    <button class="btn btn-primary btn-block" onclick="digitar(8)">8</button>
-                    <button class="btn btn-primary btn-block" onclick="digitar(9)">9</button>
+                    <button class="btn btn-primary btn-block digito">7</button>
+                    <button class="btn btn-primary btn-block digito">8</button>
+                    <button class="btn btn-primary btn-block digito">9</button>
                 </div>
                 <div>
-                    <button class="btn btn-primary btn-block" onclick="digitar(0)">0</button>
+                    <button class="btn btn-primary btn-block digito">0</button>
                 </div>
                 <div class="comandos">
-                    <button class="btn btn-primary btn-block" onclick="branco()">Branco</button>
-                    <button class="btn btn-primary btn-block" onclick="corrige()">Corrige</button>
-                    <button class="btn btn-primary btn-block" onclick="confirmar()">Confirma</button>
+                    <button class="btn btn-primary btn-block comando">Branco</button>
+                    <button class="btn btn-primary btn-block comando">Corrige</button>
+                    <button class="btn btn-primary btn-block comando">Confirma</button>
                 </div>
             </div>
             <div class="row rodape mt-4 p-1 d-none">
