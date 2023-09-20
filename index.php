@@ -65,7 +65,33 @@ $json = json_encode($arrCandidatos);
                     <div class="foto-candidato"></div>
                 </div>
             </div>
-            <div class="row rodape mt-4 p-1">
+            <div class="keypad">
+                <!-- Adicione botões para os números de 0 a 9, Branco, Corrige e Confirmar -->
+                <div>
+                    <button class="btn btn-primary btn-block" onclick="digitar(1)">1</button>
+                    <button class="btn btn-primary btn-block" onclick="digitar(2)">2</button>
+                    <button class="btn btn-primary btn-block" onclick="digitar(3)">3</button>
+                </div>
+                <div>
+                    <button class="btn btn-primary btn-block" onclick="digitar(4)">4</button>
+                    <button class="btn btn-primary btn-block" onclick="digitar(5)">5</button>
+                    <button class="btn btn-primary btn-block" onclick="digitar(6)">6</button>
+                </div>
+                <div>
+                    <button class="btn btn-primary btn-block" onclick="digitar(7)">7</button>
+                    <button class="btn btn-primary btn-block" onclick="digitar(8)">8</button>
+                    <button class="btn btn-primary btn-block" onclick="digitar(9)">9</button>
+                </div>
+                <div>
+                    <button class="btn btn-primary btn-block" onclick="digitar(0)">0</button>
+                </div>
+                <div class="comandos">
+                    <button class="btn btn-primary btn-block" onclick="branco()">Branco</button>
+                    <button class="btn btn-primary btn-block" onclick="corrige()">Corrige</button>
+                    <button class="btn btn-primary btn-block" onclick="confirmar()">Confirma</button>
+                </div>
+            </div>
+            <div class="row rodape mt-4 p-1 d-none">
                 <div class="col-12">
                     <div>
                         PRESSIONE A TECLA <code>ENTER</code> PARA CONFIRMAR ESTE VOTO
