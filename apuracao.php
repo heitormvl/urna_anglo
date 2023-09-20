@@ -38,12 +38,12 @@ $nulos = 0;
                 <?php foreach ($apuracao as $candidato) : ?>
                     <?php if ($candidato['candidato'] == 0)
                     {
-                        $brancos += 1;
+                        $brancos = $candidato['qtd_votos'];
                         continue;
                     }
                     elseif ($candidato['candidato'] == 999)
                     {
-                        $nulos += 1;
+                        $nulos = $candidato['qtd_votos'];
                         continue;
                     }
                     ?>
