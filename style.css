@@ -107,7 +107,7 @@ input[type=text] {
     width: 4.5rem;
     height: 4rem;
     margin-top: 0.25rem;
-    opacity: 0.21;
+    opacity: 0.01;
 }
 
 .keypad>.comandos>button {
