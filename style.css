@@ -60,15 +60,13 @@ input[type=text] {
     background-position: center;
     background-size: contain;
     height: 18rem;
-    width: 18rem;
+    width: 13rem;
 }
 
 .rodape {
     border-top: 1px solid black;
-    margin-left: -4.5rem;
-    margin-right: -4.5rem;
-    /* margin-left: -2rem;
-    margin-right: -2rem; */
+    margin-left: -2rem;
+    margin-right: -2rem;
 }
 
 .keypad {
