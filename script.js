@@ -1,8 +1,8 @@
 // On load
-jQuery(function($) {
+jQuery(function ($) {
 
     // Instala atalhos para Enter e Backspace
-    $('html').on('keydown', function(e) {
+    $('html').on('keydown', function (e) {
         if (e.keyCode == 13) {
             confirmar();
         }
@@ -12,16 +12,16 @@ jQuery(function($) {
     });
 
     // Botões de dígitos
-    $('button.digito').on('click', function() {
+    $('button.digito').on('click', function () {
 
         const digito = parseInt($(this).text());
         const visor1 = $('#digito1');
         const visor2 = $('#digito2');
-        
+
         if (!visor1.val()) {
             visor1.val(digito);
         }
-        else if(!visor2.val()) {
+        else if (!visor2.val()) {
             visor2.val(digito);
             exibirCandidato(true);
         }
@@ -34,12 +34,9 @@ jQuery(function($) {
 });
 
 
-function exibirCandidato(exibir)
-{
-    if(exibir) {
-        
-        validarCandidato();
-
+function exibirCandidato(exibir) {
+    if (exibir) {
+        if (!validarCandidato()) { return; }
         $('.dados-candidato').removeClass('d-none');
         $('.foto').removeClass('d-none');
         $('.rodape').removeClass('d-none');
@@ -52,20 +49,28 @@ function exibirCandidato(exibir)
     }
 }
 
-function confirmar()
-{
+function confirmar() {
+    // Submete o formulário
+    $('#frm_votacao').submit();
 }
 
 function corrigir() {
     $('#digito1').val('');
     $('#digito2').val('');
-    $('#numero_candidato').val('');
+    voto('');
     exibirCandidato(false);
 }
 
 function votoBranco() {
     exibirCandidato(false);
     $('.voto-especial.voto-branco').removeClass('d-none');
+    voto('00');
+}
+
+function votoNulo() {
+    exibirCandidato(false);
+    $('.voto-especial.voto-nulo').removeClass('d-none');
+    voto('999');
 }
 
 function validarCandidato() {
@@ -75,7 +80,7 @@ function validarCandidato() {
     // Checa se o número do candidato existe
     if (!candidatos[numCandidato]) {
         votoNulo();
-        return;
+        return false;
     }
 
     const candidato = candidatos[numCandidato];
@@ -83,4 +88,12 @@ function validarCandidato() {
     $('#nome_candidato').text(candidato.nome_candidato);
     $('#partido_candidato').text(candidato.sigla_partido_candidato + " - " + candidato.nome_partido_candidato);
     $('.foto-candidato').css('background-image', 'url(images/' + candidato.foto_candidato + ')');
+
+    voto(numCandidato);
+
+    return true;
+}
+
+function voto(numCandidato) {
+    $('#numero_candidato').val(numCandidato);
 }

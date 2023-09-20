@@ -45,7 +45,7 @@ $json = json_encode($arrCandidatos);
                     <h2 class="cargo">
                         Representante de Turma
                     </h2>
-                    <form action="confirmar_voto.php" method="POST" class="pt-3">
+                    <form action="confirmar_voto.php" method="POST" class="pt-3" id="frm_votacao">
                         <input type="text" name="digito1" id="digito1">
                         <input type="text" name="digito2" id="digito2">
                         <input type="hidden" name="numero_candidato" id="numero_candidato">
