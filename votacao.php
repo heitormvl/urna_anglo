@@ -103,10 +103,10 @@ $json = json_encode($arrCandidatos);
             <div class="row rodape mt-4 p-1 d-none">
                 <div class="col-12">
                     <div>
-                        PRESSIONE A TECLA <code>ENTER</code> PARA CONFIRMAR ESTE VOTO
+                        PRESSIONE A TECLA <code>CONFIRMA</code> PARA CONFIRMAR ESTE VOTO
                     </div>
                     <div>
-                        PRESSIONE A TECLA <code>BACKSPACE</code> PARA CORRIGIR ESTE VOTO
+                        PRESSIONE A TECLA <code>CORRIGE</code> PARA CORRIGIR ESTE VOTO
                     </div>
                 </div>
             </div>
